@@ -9,7 +9,6 @@ docker_compose: docker-compose {
   user: User
   video: Video
   analytics: Analytics
-  email: Email
 
   kafka: Kafka
   user_db: User DB
@@ -27,9 +26,3 @@ docker_compose: docker-compose {
   video -> video_db
   analytics -> analytics_db
 }
-
-email: 외부 Email
-slack: Slack
-
-docker_compose.email -> email: send
-docker_compose.api_gateway -> slack: alarm
